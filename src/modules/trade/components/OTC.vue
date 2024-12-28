@@ -62,8 +62,8 @@
       placeholder="%"
     >
       <template #label>
-        {{ $t("common.binance_percent") }}:
-        <span class="otc__binance-price pr-1">{{ bitfinexPrice }}</span>
+        {{ $t("common.kucoin_percent") }}:
+        <span class="otc__kucoin-price pr-1">{{ bitfinexPrice }}</span>
       </template>
     </TradeInput>
     <TradeInput
@@ -298,7 +298,7 @@ export default {
       padding: 2px;
     }
   }
-  &__binance-price {
+  &__kucoin-price {
     color: rgb(70, 191, 141);
     font-size: 12px;
   }

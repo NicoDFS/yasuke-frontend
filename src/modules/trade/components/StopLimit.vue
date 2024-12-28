@@ -293,7 +293,7 @@ export default {
       padding: 2px;
     }
   }
-  &__binance-price {
+  &__kucoin-price {
     color: rgb(70, 191, 141);
     font-size: 12px;
   }
