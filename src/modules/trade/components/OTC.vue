@@ -158,15 +158,17 @@ export default {
     };
   },
   computed: {
-    ...mapGetters({ coins: "core/coins", profile: "core/profile" }),
+    ...mapGetters({ 
+      coins: "core/coins", 
+      profile: "core/profile" 
+    }),
 
     color() {
-      return this.operation == "buy" ? "green" : "orange";
+      return this.operation === "buy" ? "green" : "orange";
     },
 
     limits() {
-      const limitCurrency =
-        this.operation == "buy" ? this.quoteCurrency : this.baseCurrency;
+      const limitCurrency = this.operation === "buy" ? this.quoteCurrency : this.baseCurrency;
       return {
         min: this.coins[limitCurrency]?.limits?.order.min,
         max: this.coins[limitCurrency]?.limits?.order.max,
@@ -175,26 +177,27 @@ export default {
     },
 
     resulterQuoteSum() {
-      let share = 1 + this.operationData.percent / 100 || 1;
-      let result = this.operationData.quantity * this.bitfinexPrice * share;
+      const share = 1 + this.operationData.percent / 100 || 1;
+      const result = this.operationData.quantity * this.bitfinexPrice * share;
       return result ? Number(result.toFixed(8)) : "0";
     },
 
     fee() {
       // Use the backend's fee calculation
       if (this.profile.user.user_fee === 0) {
-        return 0;  // Backend returns 0 for zero fee
+        return 0; // Backend returns 0 for zero fee
       }
 
       // For display only - actual fee calculation happens on backend
-      const amount = this.operationData.quantity || 0;
-      const price = Math.max(+this.operationData.limit, this.bitfinexPrice) || 0;
+      const quantity = this.operationData.quantity || 0;
+      const currentPrice = Math.max(+this.operationData.limit, this.bitfinexPrice) || 0;
+      const userFee = this.profile.user.user_fee || 0;
       
-      if (this.operation === 'buy') {
-        return Number((amount * (this.profile.user.user_fee || 0)).toFixed(8));
-      } else {
-        return Number((amount * price * (this.profile.user.user_fee || 0)).toFixed(8));
+      if (this.operation === "buy") {
+        return Number((quantity * userFee).toFixed(8));
       }
+      
+      return Number((quantity * currentPrice * userFee).toFixed(8));
     },
   },
   methods: {
