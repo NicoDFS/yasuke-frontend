@@ -154,6 +154,7 @@ export default {
         limit: "",
         percent: "0",
       },
+      calculatedFee: 0
     };
   },
   computed: {
@@ -180,28 +181,19 @@ export default {
     },
 
     fee() {
+      // Use the backend's fee calculation
       if (this.profile.user.user_fee === 0) {
-        return 0;
+        return 0;  // Backend returns 0 for zero fee
+      }
+
+      // For display only - actual fee calculation happens on backend
+      const amount = this.operationData.quantity || 0;
+      const price = Math.max(+this.operationData.limit, this.bitfinexPrice) || 0;
+      
+      if (this.operation === 'buy') {
+        return Number((amount * (this.profile.user.user_fee || 0)).toFixed(8));
       } else {
-        if (this.operation == "buy")
-          return Number(
-            (
-              this.operationData.quantity *
-              (typeof this.profile.user.user_fee === "number"
-                ? this.profile.user.user_fee
-                : this.coins[this.baseCurrency]?.fee?.order.limits)
-            ).toFixed(8)
-          );
-        else
-          return Number(
-            (
-              this.operationData.quantity *
-              Math.max(+this.operationData.limit, this.bitfinexPrice) *
-              (typeof this.profile.user.user_fee === "number"
-                ? this.profile.user.user_fee
-                : this.coins[this.quoteCurrency].fee?.order.limits)
-            ).toFixed(8)
-          );
+        return Number((amount * price * (this.profile.user.user_fee || 0)).toFixed(8));
       }
     },
   },
@@ -243,6 +235,33 @@ export default {
           break;
       }
     },
+
+    calculateFee(amount, price) {
+      // Since we set fees to 0 in backend
+      return 0
+    },
+
+    formatFee(fee) {
+      // Handle zero fee case explicitly
+      if (fee === 0) return '0'
+      if (!fee || isNaN(fee)) return '0'
+      return fee.toFixed(8)
+    },
+
+    calculateOrderDetails() {
+      const amount = parseFloat(this.amount) || 0
+      const price = parseFloat(this.price) || 0
+      
+      // Calculate total
+      this.total = amount * price
+      
+      // Set fee to 0 as configured in backend
+      this.calculatedFee = 0
+      
+      // Format display values
+      this.displayTotal = this.total.toFixed(8)
+      this.displayFee = '0'
+    }
   },
 };
 </script>
