@@ -6,7 +6,7 @@ import core from "./core";
 const storeModules = {
   modules: {
     main,
-    core
+    core,
   },
 };
 

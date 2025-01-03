@@ -415,12 +415,10 @@
         return r;
       });
       var i = n("q1tI");
-      const r = n
-        .n(i)
-        .a.createContext({
-          isGrouped: !1,
-          cellState: { isTop: !0, isRight: !0, isBottom: !0, isLeft: !0 },
-        });
+      const r = n.n(i).a.createContext({
+        isGrouped: !1,
+        cellState: { isTop: !0, isRight: !0, isBottom: !0, isLeft: !0 },
+      });
     },
     zbLM: function (e, t, n) {
       "use strict";

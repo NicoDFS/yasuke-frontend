@@ -479,12 +479,10 @@
         return r;
       });
       var o = n("q1tI");
-      const r = n
-        .n(o)
-        .a.createContext({
-          isGrouped: !1,
-          cellState: { isTop: !0, isRight: !0, isBottom: !0, isLeft: !0 },
-        });
+      const r = n.n(o).a.createContext({
+        isGrouped: !1,
+        cellState: { isTop: !0, isRight: !0, isBottom: !0, isLeft: !0 },
+      });
     },
     xADF: function (e, t, n) {
       "use strict";

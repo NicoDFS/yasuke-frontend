@@ -2754,12 +2754,10 @@
         return n;
       });
       var o = i("q1tI");
-      const n = i
-        .n(o)
-        .a.createContext({
-          isGrouped: !1,
-          cellState: { isTop: !0, isRight: !0, isBottom: !0, isLeft: !0 },
-        });
+      const n = i.n(o).a.createContext({
+        isGrouped: !1,
+        cellState: { isTop: !0, isRight: !0, isBottom: !0, isLeft: !0 },
+      });
     },
     "xnr+": function (t, e) {
       t.exports =

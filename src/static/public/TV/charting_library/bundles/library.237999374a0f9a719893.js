@@ -38212,14 +38212,12 @@
                   }
                   h - d > m
                     ? ((_ = (a - h + d) * o),
-                      l
-                        .mainSeries()
-                        .setGotoDateResult({
-                          timestamp: Object(s.ensureNotNull)(
-                            l.timeScale().points().valueAt(h)
-                          ),
-                          eod: !0,
-                        }))
+                      l.mainSeries().setGotoDateResult({
+                        timestamp: Object(s.ensureNotNull)(
+                          l.timeScale().points().valueAt(h)
+                        ),
+                        eod: !0,
+                      }))
                     : (_ = (a - m + 1 + d) * o),
                     r.startScrollTime(0),
                     Object(C.doAnimate)({
@@ -65461,12 +65459,10 @@
                           var s = te.factoryDefaults(
                               "chartproperties.volumePaneSize"
                             ),
-                            r = e._model
-                              .model()
-                              .createStudyInserter({
-                                type: "java",
-                                studyId: "Volume@tv-basicstudies",
-                              });
+                            r = e._model.model().createStudyInserter({
+                              type: "java",
+                              studyId: "Volume@tv-basicstudies",
+                            });
                           r.setForceOverlay(h.enabled("volume_force_overlay")),
                             r.setPaneSize(s),
                             h.enabled("hide_volume_ma") &&

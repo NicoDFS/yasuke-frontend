@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
-input[type="text"]::-webkit-input-placeholder {color: #ccc;}
-input[type="text"]::-moz-placeholder          {color: #ccc;}
-input[type="text"]:-moz-placeholder           {color: #ccc;}
-input[type="text"]:-ms-input-placeholder      {color: #ccc;}
+input[type="text"]::-webkit-input-placeholder {
+  color: #ccc;
+}
+input[type="text"]::-moz-placeholder {
+  color: #ccc;
+}
+input[type="text"]:-moz-placeholder {
+  color: #ccc;
+}
+input[type="text"]:-ms-input-placeholder {
+  color: #ccc;
+}
 
 h2 {
   font-weight: 700;
@@ -724,7 +732,8 @@ img {
 
 .currency-list:hover,
 .wallet-list:hover {
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -893,8 +902,20 @@ img {
   align-items: center;
 }
 
-.currency-list .currency-table .table thead tr td:nth-of-type(n + 3) .sell-orders__td,
-.wallet-list .currency-table .table thead tr td:nth-of-type(n + 3) .sell-orders__td {
+.currency-list
+  .currency-table
+  .table
+  thead
+  tr
+  td:nth-of-type(n + 3)
+  .sell-orders__td,
+.wallet-list
+  .currency-table
+  .table
+  thead
+  tr
+  td:nth-of-type(n + 3)
+  .sell-orders__td {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -906,8 +927,18 @@ img {
   max-width: 30px;
 }
 
-.currency-list .currency-table .table tbody td:nth-of-type(n + 3) .currency-table__td,
-.wallet-list .currency-table .table tbody td:nth-of-type(n + 3) .currency-table__td {
+.currency-list
+  .currency-table
+  .table
+  tbody
+  td:nth-of-type(n + 3)
+  .currency-table__td,
+.wallet-list
+  .currency-table
+  .table
+  tbody
+  td:nth-of-type(n + 3)
+  .currency-table__td {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -1061,7 +1092,13 @@ img {
   align-items: center;
 }
 
-.wallet-list .wallet-table .table thead tr td:nth-of-type(n + 3) .sell-orders__td {
+.wallet-list
+  .wallet-table
+  .table
+  thead
+  tr
+  td:nth-of-type(n + 3)
+  .sell-orders__td {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -1072,7 +1109,12 @@ img {
   max-width: 30px;
 }
 
-.wallet-list .wallet-table .table tbody td:nth-of-type(n + 3) .wallet-table__td {
+.wallet-list
+  .wallet-table
+  .table
+  tbody
+  td:nth-of-type(n + 3)
+  .wallet-table__td {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -1107,7 +1149,8 @@ img {
 }
 
 .left-side-wrapper:hover {
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -1274,7 +1317,8 @@ thead .sell-orders__td b {
 }
 
 .graphic:hover {
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -1333,7 +1377,8 @@ thead .sell-orders__td b {
 
 .orders:hover,
 .trades:hover {
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -2137,7 +2182,9 @@ input:-moz-placeholder {
   display: flex !important;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
   width: 325px;
   height: 80px;
 }
@@ -2217,7 +2264,7 @@ button:active {
   width: 23%;
 }
 
-@media(max-width: 1100px) {
+@media (max-width: 1100px) {
   .walletTable__item_balans {
     width: 13%;
   }
@@ -2411,7 +2458,9 @@ button:active {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
   /*width: 150px;*/
   height: 80px;
 }
@@ -3124,7 +3173,8 @@ button {
   transition: box-shadow 0.25s;
   border-radius: 5px;
   background-color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 .walletTable__item_val1 {
@@ -4111,8 +4161,20 @@ main-new {
     display: block;
     width: 101%;
     height: 100%;
-    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 75%, white 92%, white);
-    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 75%, white 92%, white);
+    background: -webkit-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 75%,
+      white 92%,
+      white
+    );
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 75%,
+      white 92%,
+      white
+    );
   }
 }
 
@@ -4495,8 +4557,10 @@ main-new {
   backface-visibility: hidden;
   -webkit-transform: rotate3d(0, 0, 0, 0);
   transform: rotate3d(0, 0, 0, 0);
-  -webkit-transition: background-color 100ms ease-out, margin 100ms ease-out, height 100ms ease-out;
-  transition: background-color 100ms ease-out, margin 100ms ease-out, height 100ms ease-out;
+  -webkit-transition: background-color 100ms ease-out, margin 100ms ease-out,
+    height 100ms ease-out;
+  transition: background-color 100ms ease-out, margin 100ms ease-out,
+    height 100ms ease-out;
   background-color: rgba(48, 121, 244, 0.1);
   margin: 5px 5px 5px 0;
   border-radius: 20px;
@@ -4627,7 +4691,8 @@ iframe.wizard {
 .custom-control-label::before,
 .custom-file-label,
 .custom-select {
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 .custom-control-label::before {
   position: absolute;
@@ -4653,12 +4718,13 @@ iframe.wizard {
   height: calc(1rem - 4px);
   background-color: #adb5bd;
   border-radius: 0.5rem;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-    -webkit-transform 0.15s ease-in-out;
-  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
-  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-transform 0.15s ease-in-out;
 }
 .custom-control-label::after {
   position: absolute;
@@ -4670,7 +4736,9 @@ iframe.wizard {
   content: "";
   background: no-repeat 50%/50% 50%;
 }
-.register__input-group .custom-control-input:checked ~ .custom-control-label::before {
+.register__input-group
+  .custom-control-input:checked
+  ~ .custom-control-label::before {
   border-color: var(--theme-primary-color);
   background-color: var(--theme-primary-color);
 }
@@ -4710,8 +4778,8 @@ iframe.wizard {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .logIn__form input {

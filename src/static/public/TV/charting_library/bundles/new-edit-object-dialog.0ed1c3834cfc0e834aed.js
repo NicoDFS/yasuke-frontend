@@ -1784,27 +1784,25 @@
             transparencies: n,
             visible: l,
           } = this.props.property.childs();
-          return e
-            .childNames()
-            .map((a) =>
-              r.createElement(
-                T.a,
-                {
-                  key: a,
-                  grouped: !0,
-                  label: r.createElement(
-                    "div",
-                    { className: Se.childRowContainer },
-                    t.childs()[a].value()
-                  ),
-                },
-                r.createElement(Ee.a, {
-                  disabled: !l.value(),
-                  color: e.childs()[a],
-                  transparency: n.childs()[a],
-                })
-              )
-            );
+          return e.childNames().map((a) =>
+            r.createElement(
+              T.a,
+              {
+                key: a,
+                grouped: !0,
+                label: r.createElement(
+                  "div",
+                  { className: Se.childRowContainer },
+                  t.childs()[a].value()
+                ),
+              },
+              r.createElement(Ee.a, {
+                disabled: !l.value(),
+                color: e.childs()[a],
+                transparency: n.childs()[a],
+              })
+            )
+          );
         }
       }
       kt.contextType = te.b;
