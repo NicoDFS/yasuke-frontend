@@ -241,7 +241,7 @@ export default {
       }
     },
 
-    calculateFee(amount, price) {
+    calculateFee() {
       // Since we set fees to 0 in backend
       return 0;
     },
