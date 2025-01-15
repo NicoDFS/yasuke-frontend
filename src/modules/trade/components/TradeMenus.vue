@@ -222,6 +222,11 @@ export default {
     },
 
     addOrder(operation, orderData, type, callback) {
+      console.log('TradeMenus addOrder:', {
+        operation,
+        orderData,
+        type
+      });
       this.disableOperations = true;
       setTimeout(() => (this.disableOperations = false), 1500);
 
