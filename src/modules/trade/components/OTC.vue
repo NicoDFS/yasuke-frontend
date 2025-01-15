@@ -204,11 +204,11 @@ export default {
   },
   methods: {
     onSubmit() {
-      console.log('AUTO Order Data:', {
+      console.log("AUTO Order Data:", {
         quantity: this.getFixedDecimal(+this.operationData.quantity),
         otc_limit: this.getFixedDecimal(+this.operationData.limit),
         otc_percent: this.getFixedDecimal(+this.operationData.percent),
-        type: 2
+        type: 2,
       });
       
       this.$emit("add-order", {
@@ -219,7 +219,7 @@ export default {
         },
         type: 2,
         callback: () => {
-          console.log('AUTO Order callback executed');
+          console.log("AUTO Order callback executed");
           this.operationData.quantity = "";
           this.operationData.limit = "";
           this.operationData.percent = "0";
