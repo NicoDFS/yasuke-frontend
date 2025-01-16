@@ -210,7 +210,7 @@ export default {
         otc_percent: this.getFixedDecimal(+this.operationData.percent),
         type: 2,
       });
-      
+
       this.$emit("add-order", {
         orderData: {
           quantity: this.getFixedDecimal(+this.operationData.quantity),
