@@ -393,6 +393,7 @@
         <!--Отправлено на почту-->
       </template>
     </div>
+    <AppFooter />
   </div>
 </template>
 
@@ -403,6 +404,7 @@ import DatePicker from "vue-datepicker-next";
 import "vue-datepicker-next/index.css";
 import { VueRecaptcha } from "vue-recaptcha";
 import PasswordStrength from "../components/PasswordStrength.vue";
+import AppFooter from "~/components/layout/Footer.vue";
 
 function getEmptyForm() {
   return {
@@ -437,6 +439,7 @@ export default {
     ModalPagesHeader,
     DatePicker,
     VueRecaptcha,
+    AppFooter,
   },
   props: {
     refcode: {
@@ -861,11 +864,22 @@ $red: #e93a3a;
   border-radius: 3px;
 }
 
-.register {
+.auth {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: rgb(54, 55, 60);
+
+  :deep(.footer) {
+    margin-top: 48px;
+  }
+}
+
+.register {
+  min-height: auto;
   align-items: center;
   justify-content: center;
-  background-color: #19233c;
+  background-color: transparent;
   color: #ffffff;
   display: flex;
   flex-direction: column;

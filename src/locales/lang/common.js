@@ -781,6 +781,32 @@ const common = {
     password_lower: "Хотя бы одну строчную",
     password_number: "Хотя бы одну цифру",
     password_chars: "8-30 символов",
+    earn: "Заработок",
+    connect_with_us: "Связаться с нами",
+    trade: "Торговля",
+    swap: "Обмен",
+    buysell_crypto: "Купить/Продать Крипто",
+    card: "Карта",
+    trading_competition: "Торговые соревнования",
+    token_listing: "Листинг токенов",
+    ieo: "IEO",
+    market_making: "Маркет-мейкинг",
+    aml_kyc: "AML/KYC",
+    about_company: "О компании",
+    fees_and_limits: "Комиссии и лимиты",
+    roadmap: "Дорожная карта",
+    lending: "Кредитование",
+    borrowing: "Заимствование",
+    staking: "Стейкинг",
+    nodes: "Ноды",
+    launchpad: "Лаунчпад",
+    support_description:
+      "Круглосуточная поддержка в чате с нашими дружелюбными агентами к вашим услугам.",
+    terms_of_use: "Условия использования",
+    privacy_policy: "Политика конфиденциальности",
+    kyc_aml_policy: "Политика KYC/AML",
+    delisting_policy: "Политика делистинга",
+    tagline: "От Самурая к Крипто Воину",
   },
 
   en: {
@@ -1231,7 +1257,7 @@ const common = {
     activation: "Activation",
     checkemail: "Check your email for activation link",
     emailoptional: "Email (optional)",
-    email_recipient: "Recipient’s email (optional).",
+    email_recipient: "Recipient's email (optional).",
     cardnumber: "Card number",
     topup: "DEPOSIT",
     topupCapitalize: "Deposit",
@@ -1273,7 +1299,7 @@ const common = {
     walletdeposit_text:
       "After selecting the cryptocurrency transfer as a deposit method,\n" +
       "you will see a window where you will need to generate an address\n" +
-      "to transfer the appropriate cryptocurrency to. Click ‘Create’\n" +
+      "to transfer the appropriate cryptocurrency to. Click 'Create'\n" +
       "and you will see an address where to send bitcoins to deposit to\n" +
       "your account. Such addresses are generated for each of the\n" +
       "cryptocurrencies supported by the system.",
@@ -1362,7 +1388,7 @@ const common = {
     updateord: "UPDATE",
     changequantity: "Change quantity",
     changeprice: "Change price",
-    youcant: "You can’t specify a new quantity less than",
+    youcant: "You can't specify a new quantity less than",
     leftinord: "left in order",
     updlimitord: "Update Limit order",
     modal50rub2: "Check your wallet.",
@@ -1617,6 +1643,32 @@ const common = {
     password_lower: "At least one lowercase letter",
     password_number: "At least one number",
     password_chars: "8-30 Characters",
+    earn: "Earn",
+    connect_with_us: "Connect With Us",
+    trade: "Trade",
+    swap: "Swap",
+    buysell_crypto: "Buy/Sell Crypto",
+    card: "Card",
+    trading_competition: "Trading Competition",
+    token_listing: "Token Listing",
+    ieo: "IEO",
+    market_making: "Market Making",
+    aml_kyc: "AML/KYC",
+    about_company: "About Company",
+    fees_and_limits: "Fees and Limits",
+    roadmap: "Roadmap",
+    lending: "Lending",
+    borrowing: "Borrowing",
+    staking: "Staking",
+    nodes: "Nodes",
+    launchpad: "Launchpad",
+    support_description:
+      "Get 24/7 chat support with our friendly customer agents at your service.",
+    terms_of_use: "Terms of Use",
+    privacy_policy: "Privacy Policy",
+    kyc_aml_policy: "KYC/AML Policy",
+    delisting_policy: "Delisting Policy",
+    tagline: "From Samurai to Crypto Warrior",
   },
 };
 

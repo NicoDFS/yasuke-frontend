@@ -14,9 +14,7 @@
       <a class="header__logo-link" href="/">
         <img
           width="135"
-          :src="
-            localConfig.logo ? localConfig.logo : '/public/img/logo-white.svg'
-          "
+          :src="localConfig.logo ? localConfig.logo : '/public/img/logo.png'"
         />
       </a>
     </div>
@@ -24,7 +22,7 @@
     <div v-if="accountData" class="header__ether">
       <div class="header__ether-img">
         <img
-          style="height: 46px"
+          style="height: 82px"
           :src="
             coins[accountData?.currentBaseCurrency].logo.length > 0
               ? coins[accountData?.currentBaseCurrency].logo
