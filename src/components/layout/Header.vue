@@ -14,7 +14,7 @@
       <a class="header__logo-link" href="/">
         <img
           width="135"
-          :src="localConfig.logo ? localConfig.logo : '/public/img/logo.png'"
+          :src="localConfig.logo ? localConfig.logo : '/public/img/logo-white.svg'"
         />
       </a>
     </div>
