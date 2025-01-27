@@ -24,7 +24,7 @@
     <div v-if="accountData" class="header__ether">
       <div class="header__ether-img">
         <img
-          style="height: 82px"
+          style="height: 46px"
           :src="
             coins[accountData?.currentBaseCurrency].logo.length > 0
               ? coins[accountData?.currentBaseCurrency].logo
