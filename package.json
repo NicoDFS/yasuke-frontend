@@ -23,6 +23,7 @@
     "highcharts": "^10.0.0",
     "highcharts-vue": "^1.4.0",
     "jwt-decode": "^3.1.2",
+    "lucide-vue-next": "^0.475.0",
     "moment": "^2.29.3",
     "postcss": "^8.4.5",
     "postcss-import": "^14.0.2",

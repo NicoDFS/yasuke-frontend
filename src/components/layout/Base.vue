@@ -336,7 +336,7 @@ th.walletTable__header,
   border-top: 1px solid v-bind(borderLocal) !important;
 }
 .author-list__link-icon,
-.navigation__link__img {
+.navigation__link__img:not([stroke="currentColor"]) {
   fill: v-bind(mainTextLocal) !important;
 }
 .btn-danger {
