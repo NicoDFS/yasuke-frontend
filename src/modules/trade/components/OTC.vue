@@ -62,8 +62,8 @@
       placeholder="%"
     >
       <template #label>
-        {{ $t("common.kucoin_percent") }}:
-        <span class="otc__kucoin-price pr-1">{{ bitfinexPrice }}</span>
+        {{ $t("common.binance_percent") }}:
+        <span class="otc__binance-price pr-1">{{ bitfinexPrice }}</span>
       </template>
     </TradeInput>
     <TradeInput
@@ -154,22 +154,18 @@ export default {
         limit: "",
         percent: "0",
       },
-      calculatedFee: 0,
     };
   },
   computed: {
-    ...mapGetters({
-      coins: "core/coins",
-      profile: "core/profile",
-    }),
+    ...mapGetters({ coins: "core/coins", profile: "core/profile" }),
 
     color() {
-      return this.operation === "buy" ? "green" : "orange";
+      return this.operation == "buy" ? "green" : "orange";
     },
 
     limits() {
       const limitCurrency =
-        this.operation === "buy" ? this.quoteCurrency : this.baseCurrency;
+        this.operation == "buy" ? this.quoteCurrency : this.baseCurrency;
       return {
         min: this.coins[limitCurrency]?.limits?.order.min,
         max: this.coins[limitCurrency]?.limits?.order.max,
@@ -178,39 +174,39 @@ export default {
     },
 
     resulterQuoteSum() {
-      const share = 1 + this.operationData.percent / 100 || 1;
-      const result = this.operationData.quantity * this.bitfinexPrice * share;
+      let share = 1 + this.operationData.percent / 100 || 1;
+      let result = this.operationData.quantity * this.bitfinexPrice * share;
       return result ? Number(result.toFixed(8)) : "0";
     },
 
     fee() {
-      // Use the backend's fee calculation
       if (this.profile.user.user_fee === 0) {
-        return 0; // Backend returns 0 for zero fee
+        return 0;
+      } else {
+        if (this.operation == "buy")
+          return Number(
+            (
+              this.operationData.quantity *
+              (typeof this.profile.user.user_fee === "number"
+                ? this.profile.user.user_fee
+                : this.coins[this.baseCurrency]?.fee?.order.limits)
+            ).toFixed(8)
+          );
+        else
+          return Number(
+            (
+              this.operationData.quantity *
+              Math.max(+this.operationData.limit, this.bitfinexPrice) *
+              (typeof this.profile.user.user_fee === "number"
+                ? this.profile.user.user_fee
+                : this.coins[this.quoteCurrency].fee?.order.limits)
+            ).toFixed(8)
+          );
       }
-
-      // For display only - actual fee calculation happens on backend
-      const quantity = this.operationData.quantity || 0;
-      const currentPrice =
-        Math.max(+this.operationData.limit, this.bitfinexPrice) || 0;
-      const userFee = this.profile.user.user_fee || 0;
-
-      if (this.operation === "buy") {
-        return Number((quantity * userFee).toFixed(8));
-      }
-
-      return Number((quantity * currentPrice * userFee).toFixed(8));
     },
   },
   methods: {
     onSubmit() {
-      console.log("AUTO Order Data:", {
-        quantity: this.getFixedDecimal(+this.operationData.quantity),
-        otc_limit: this.getFixedDecimal(+this.operationData.limit),
-        otc_percent: this.getFixedDecimal(+this.operationData.percent),
-        type: 2,
-      });
-
       this.$emit("add-order", {
         orderData: {
           quantity: this.getFixedDecimal(+this.operationData.quantity),
@@ -219,7 +215,6 @@ export default {
         },
         type: 2,
         callback: () => {
-          console.log("AUTO Order callback executed");
           this.operationData.quantity = "";
           this.operationData.limit = "";
           this.operationData.percent = "0";
@@ -247,24 +242,6 @@ export default {
           ).toFixed(8);
           break;
       }
-    },
-
-    calculateFee() {
-      // Since we set fees to 0 in backend
-      return 0;
-    },
-
-    formatFee(fee) {
-      // Handle zero fee case explicitly
-      if (fee === 0) return "0";
-      if (!fee || isNaN(fee)) return "0";
-      return fee.toFixed(8);
-    },
-
-    calculateOrderDetails() {
-      // Set fee to 0 as configured in backend
-      this.calculatedFee = 0;
-      this.displayFee = "0";
     },
   },
 };
@@ -321,7 +298,7 @@ export default {
       padding: 2px;
     }
   }
-  &__kucoin-price {
+  &__binance-price {
     color: rgb(70, 191, 141);
     font-size: 12px;
   }
